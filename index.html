@@ -7,13 +7,20 @@
   </head>
   <body>
     <div id="content">
-      <div>Calculate a x b</div>
+      <div>Calculate a / b</div>
       <label for='fnum'>a: </label>
       <input id='fnum' name='fnum' type='number' />
       <br />
       <label for='snum'>b:</label>
       <input id='snum' name='snum' type='number' />
-      <button onclick="multiply()">Calculate</button>
+      <br />
+      <label for'intdiv'>Integer divide? </label>
+      <input id="intdiv" name="intdiv" type='checkbox'/>
+      <br />
+      <label for'display'>Display only answer? </label>
+      <input id="display" name="display" type='radio'/>
+      <br />
+      <button onclick="divide()">Calculate</button>
     </div>
   </body>
  </html>
