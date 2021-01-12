@@ -10,15 +10,31 @@
       <div>Calculate a / b</div>
       <label for='fnum'>a: </label>
       <input id='fnum' name='fnum' type='number' />
+      <button onclick="fill()">Previous Answer</button>
       <br />
       <label for='snum'>b:</label>
       <input id='snum' name='snum' type='number' />
       <br />
-      <label for'intdiv'>Integer divide? </label>
-      <input id="intdiv" name="intdiv" type='checkbox'/>
-      <br />
+      <ul>
+        <li>
+          <label for'fldiv'>Floor Divide</label>
+          <input id="intdiv" name="divtype" type='radio'/>
+        </li>
+        <li>
+          <label for'ndiv'>Divide</label>
+          <input id="ndiv" name="divtype" type='radio'/>
+        </li>
+      </ul>
       <label for'display'>Display only answer? </label>
-      <input id="display" name="display" type='radio'/>
+      <input id="display" name="display" type='checkbox'/>
+      <br />
+      <br />
+      <div>Login to see answer</div>
+      <label for'usr'> username: </label>
+      <input id='usr' name="usr" type='text' />
+      <br />
+      <label for'pwd'> password: </label>
+      <input id='pwd' name="pwd" type='password' />
       <br />
       <button onclick="divide()">Calculate</button>
     </div>

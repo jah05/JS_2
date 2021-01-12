@@ -4,6 +4,11 @@ function divide() {
   var b = document.getElementById("snum").value;
   var display = document.getElementById("display").checked
   var intdiv = document.getElementById("intdiv").checked
+  var enteredU = document.getElementById("usr").value
+  var enteredP = document.getElementById("pwd").value
+  var usr = "juju"
+  var pwd = "corvette corvette"
+
 
   if(intdiv) {
     var quotient = parseInt(a/b)
@@ -11,11 +16,22 @@ function divide() {
   else {
     var quotient = a/b
   }
-  if(display){
-    mainDiv.innerHTML = "<p>The quotient of " + a + " and " + b + ":";
+  if(usr == enteredU && pwd == enteredP){
+    if(display){
+      mainDiv.innerHTML = "<p>The quotient of " + a + " and " + b + ":";
+    }
+    else {
+      mainDiv.innerHTML += "<p>The quotient of " + a + " and " + b + ":";
+    }
+    mainDiv.innerHTML += quotient + "</p>";
   }
   else {
-    mainDiv.innerHTML += "<p>The quotient of " + a + " and " + b + ":";
+    mainDiv.innerHTML = "Invalid password";
   }
-  mainDiv.innerHTML += quotient + "</p>";
+  localStorage.setItem("ans", quotient)
+}
+
+function fill() {
+  var fnum = document.getElementById("fnum")
+  fnum.value = localStorage.getItem("ans");
 }
